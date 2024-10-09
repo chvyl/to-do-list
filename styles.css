@@ -1,0 +1,192 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body và container */
+body {
+    font-family: 'UTM Avo', sans-serif; /* Font dễ thương */
+    background-color: #ffe4e1; /* Màu nền hồng nhạt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff0f5; /* Màu khung bao bên ngoài là màu hồng phấn */
+    padding: 20px;
+    border-radius: 16px; /* Đường viền bo tròn */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    width: 600px;
+    text-align: center;
+    border: 3px solid #ff69b4; /* Khung bao màu hồng đậm */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ff69b4; /* Màu chữ hồng */
+}
+
+/* Bố cục flex cho hai khung */
+.todo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Khung nhập */
+.input-section {
+    flex: 1;
+    background-color: #ffe4e1;
+    padding: 10px;
+    border-radius: 16px;
+}
+
+.input-section input, 
+.input-section select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid #ff69b4;
+    border-radius: 8px;
+    background-color: #fff0f5;
+    color: #ff69b4;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff69b4; /* Màu hồng cho button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff1493; /* Đậm hơn khi hover */
+}
+
+/* Khung hiển thị to-do */
+.list-section {
+    flex: 1;
+    background-color: #fffaf0; /* Màu nền của khung danh sách */
+    padding: 10px;
+    border-radius: 16px;
+    height: auto;
+    overflow-y: auto; /* Thêm thanh cuộn nếu danh sách quá dài */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff0f5;
+    border-left: 5px solid transparent;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+li button:hover {
+    background-color: #ff1493;
+}
+
+li span.priority-high {
+    border-left-color: #ff69b4;
+}
+
+li span.priority-urgent {
+    border-left-color: #ff1493;
+}
+
+li span.priority-normal {
+    border-left-color: #ffb6c1;
+}
+
+/* Định dạng cho các công việc đã hoàn thành */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Định dạng giờ hiển thị */
+.time {
+    margin-left: 10px;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Định dạng cho các công việc đã hoàn thành */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Định dạng cho thời gian và ngày hiển thị */
+.time, .date {
+    margin-left: 10px;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+/* Định dạng chung cho danh sách */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fce4ec;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng checkbox và text */
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Định dạng icon thùng rác */
+li .fas.fa-trash-alt {
+    cursor: pointer;
+    color: #ff1744;
+}
+
+li .fas.fa-trash-alt:hover {
+    color: #d50000;
+}
